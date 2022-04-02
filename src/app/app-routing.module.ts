@@ -8,6 +8,14 @@ const routes:Routes = [
     component: ErrorPageComponent
   },
   {
+    path:'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) 
+  },
+  {
+    path:'heroes',
+    loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule) 
+  },
+  {
     path:'**',
    component:ErrorPageComponent
   }
