@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { ErrorPageComponent } from './shared/error-page/error-page.component';
+//import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -14,9 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
    ],
   declarations: [ 
-    AppComponent,
-    TestComponent,
-    ErrorPageComponent 
+    AppComponent
+   // ErrorPageComponent 
   ],
   bootstrap:    [ AppComponent ]
 })
