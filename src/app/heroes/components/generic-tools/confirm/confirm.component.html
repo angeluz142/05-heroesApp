@@ -1,0 +1,20 @@
+<div>
+    <!-- header -->
+    <div>
+        <h3 class="notify-header">Notificacion</h3>      
+    </div>
+
+    <!-- body -->
+    <div>
+        <p class="notify-body">Se eliminara el registro de <b><i> {{ data.superhero }} </i></b> <br> Desea continuar?</p>
+    </div>
+
+    <!-- footer -->
+    <div fxLayout="row" fxLayoutAlign="end center"  >
+        <div  fxLayoutGap="10"  >
+            <button mat-raised-button color="primary" (click)="borrar()" >Aceptar <mat-icon>check_circle</mat-icon> </button>
+            <button mat-raised-button color="warn" (click)="cancelar()" >Cancelar <mat-icon>cancel</mat-icon> </button>
+        </div>       
+    </div>
+</div>
+

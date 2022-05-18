@@ -7,3 +7,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .spacer{
     flex: 1 1 auto;
 }
+
+.notify-header{
+    border-bottom: 2px solid #ccc ;
+}
+
+.notify-header h3 {    
+    margin-bottom: 5px;
+}
+
+.notify-body{
+    margin-bottom: 20px!important;
+    padding-top: 10px!important;
+}

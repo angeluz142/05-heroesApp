@@ -1,4 +1,8 @@
-<h1>Nuevo Heroe</h1>
+<h1>
+    {{ (heroe.id) ? 'Editar' : 'Nuevo' }}
+    Heroe <i> {{ heroe.superhero }} </i></h1>
+
+
 
 <div fLayout="row" fxLayoutGap="40px" fxLayout.xs="column">
     <div fxFlex="50" fxLayout="column">
@@ -72,12 +76,12 @@
 <div fLayout="row" fxLayoutGap="40px" fxLayout.xs="column">
     <div fxFlex="50" fxLayout="column">
       
-           <div  fLayout="row" fxLayoutGap="40px" fxLayout.xs="column">
+           <div  fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column">
 
             <button fxFlex="50" mat-raised-button 
             color="primary"
             (click)="grabar()"
-            >Guardar <mat-icon>save</mat-icon> </button>
+            >{{ (heroe.id) ? 'Actualizar' : 'Guardar' }} <mat-icon>save</mat-icon> </button>
 
         <button fxFlex="50" mat-raised-button 
             color="warn"
