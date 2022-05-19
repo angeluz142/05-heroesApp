@@ -8,25 +8,26 @@ import { Usuario } from '../../../auth/interfaces/usuario.interface';
   templateUrl: './home.component.html',
   styles: [
     `
-      .container{
-        margin:10px;
+      .container {
+        margin: 10px;
       }
-    `
-  ]
+    `,
+  ],
 })
 export class HomeComponent implements OnInit {
-
-  get auth(){
+  get auth() {
     return this._auhService.auth;
   }
 
-  constructor(private router:Router,private _auhService:AuthService) { }
+  constructor(private router: Router, private _auhService: AuthService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  logOut(){
+  logOut() {
+    if (localStorage.getItem('token')) {
+      localStorage.removeItem('token');
+    }
+    
     this.router.navigate(['./auth']);
   }
-
 }
